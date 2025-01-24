@@ -3,7 +3,7 @@ package br.com.srvletapi.service;
 
 import br.com.srvletapi.classes.DBConnection;
 import br.com.srvletapi.classes.User;
-import br.com.srvletapi.repository.UserDao;
+import br.com.srvletapi.dao.UserDao;
 import br.com.srvletapi.classes.ValidationUtils;
 
 import java.sql.Connection;

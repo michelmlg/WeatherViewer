@@ -1,4 +1,4 @@
-package br.com.srvletapi.servlets;
+package br.com.srvletapi.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
