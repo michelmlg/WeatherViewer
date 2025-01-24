@@ -1,4 +1,4 @@
-package br.com.srvletapi.classes;
+package br.com.srvletapi;
 
 import java.util.regex.Pattern;
 

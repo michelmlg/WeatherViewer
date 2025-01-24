@@ -12,6 +12,11 @@ const weatherConditionsToOptions = {
         "cardClass": "cloudy-card-body",
         "iconClass": "wi wi-cloudy card-logo text-sunny",
     },
+    "Partly cloudy":{
+        "textPT": "Parcialmente Nublado",
+        "cardClass": "",
+        "iconClass": "wi wi-day-cloudy-high card-logo",
+    },
     "Overcast":{
         "textPT": "Encoberto",
         "cardClass": "cloudy-card-body",
@@ -28,14 +33,14 @@ const weatherConditionsToOptions = {
         "iconClass": "wi wi-rain card-logo text-rainy",
     },
     "Light rain":{
-        "textPT": "Chuva leve",
+        "textPT": "Chuva Leve",
         "cardClass": "rainy-card-body",
         "iconClass": "wi wi-showers card-logo",
     },
-    "Partly cloudy":{
-        "textPT": "Parcialmente Nublado",
-        "cardClass": "",
-        "iconClass": "wi wi-day-cloudy-high card-logo",
+    "Moderate rain":{
+        "textPT": "Chuva Moderada",
+        "cardClass": "rainy-card-body",
+        "iconClass": "wi wi-showers card-logo",
     },
     "Mist":{
         "textPT": "Neblina",
@@ -49,6 +54,11 @@ const weatherConditionsToOptions = {
     },
     "Heavy snow":{
         "textPT": "Neve intensa",
+        "cardClass": "",
+        "iconClass": "wi wi-snow-wind card-logo",
+    },
+    "Blizzard":{
+        "textPT": "Nevasca",
         "cardClass": "",
         "iconClass": "wi wi-snow-wind card-logo",
     },
@@ -67,6 +77,10 @@ const { location, current } = defineProps({
 const weatherConditionOptions = computed(
     ()=> weatherConditionsToOptions[current.condition.text||"Default"]
 );
+
+console.log(current);
+console.log(location);
+
 </script>
 
 

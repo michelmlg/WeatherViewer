@@ -2,7 +2,6 @@
 import { ref } from "vue";
 
 const formData = ref({
-  action: "register",
   username: "",
   email: "",
   password: "",
@@ -14,7 +13,7 @@ const errorMessage = ref("");
 const onSend = async () => {
   try {
     // Faz a requisição POST
-    const response = await fetch("/api/user", {
+    const response = await fetch("/api/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

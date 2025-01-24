@@ -1,17 +1,11 @@
-package br.com.srvletapi.service;
+package br.com.srvletapi.classes;
 
 
-import br.com.srvletapi.classes.DBConnection;
-import br.com.srvletapi.classes.User;
-import br.com.srvletapi.dao.UserDao;
-import br.com.srvletapi.classes.ValidationUtils;
+import br.com.srvletapi.ValidationUtils;
 
-import java.sql.Connection;
-import java.sql.SQLException;
+public class UserValidation {
 
-public class UserService {
-
-    public static boolean registerUser(User user) throws IllegalArgumentException, SQLException, ClassNotFoundException{
+    public static void validateUser(User user) throws IllegalArgumentException{
         // Validação do nome de usuário
         if (user.getUsername() == null || user.getUsername().isEmpty()) {
             throw new IllegalArgumentException("O nome de usuário é obrigatório.");
@@ -44,23 +38,5 @@ public class UserService {
             throw new IllegalArgumentException("O papel deve ser 'user' ou 'admin'.");
         }
 
-        Connection con = DBConnection.createConnection();
-
-        if(UserDao.store(con, user)){
-            DBConnection.closeConnection(con);
-            return true;
-        }else{
-            DBConnection.closeConnection(con);
-            return false;
-        }
-
-       
     }
-
-    // public static boolean loginUser(String method, String findParam){
-    
-
-
-    // }
-
 }
