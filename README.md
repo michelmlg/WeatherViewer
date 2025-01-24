@@ -8,10 +8,9 @@ Kickstart your full stack side-project with a Java Spring web server, Postgres d
 Utilizando esse como base, alterei o funcionamento do backend para utilizar Java SE 11 ao invés de Java Spring. Fiz essa mudança por estar estudando as classes dessa versão do Java.
 
 Com essa mudança a arquitetura do projeto ficou assim:
-
-Frontend: Vue.js(versão 3)
-Servidor web: Tomcat 9.0.74 (openjdk11, Java SE 11) 
-Banco de dados: PostgreSQL
+- Frontend: Vue.js(versão 3)
+- Servidor web: Tomcat 9.0.74 (openjdk11, Java SE 11) 
+- Banco de dados: PostgreSQL
 
 Endpoints:
 - Frontend - http://localhost:5173/
